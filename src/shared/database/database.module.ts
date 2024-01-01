@@ -6,8 +6,12 @@ import { BankAccountsRepository } from './repositories/bank-accounts.repositorie
 
 @Global()
 @Module({
-  providers: [PrismaService, UsersRepository, CategoriesRepository, BankAccountsRepository],
+  providers: [
+    PrismaService,
+    UsersRepository,
+    CategoriesRepository,
+    BankAccountsRepository,
+  ],
   exports: [UsersRepository, CategoriesRepository, BankAccountsRepository],
 })
-export class DatabaseModule {
-}
+export class DatabaseModule {}
